@@ -22,8 +22,8 @@ pipeline {
         stage('Build docker image') {
            steps {
                script {         
-                 def customImage = docker.build('initsixcloud/petclinic', "./docker")
-                 docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+                 def customImage = docker.build('pnamade/petclinic', "./docker")
+                 docker.withRegistry('az400m16acr2552528234.azurecr.io', 'az400m16acr2552528234') {
                  customImage.push("${env.BUILD_NUMBER}")
                  }                     
            }
