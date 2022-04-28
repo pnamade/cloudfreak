@@ -12,6 +12,9 @@ pipeline {
             }
         }
 	stage('SonarCloud analysis') {
+	    tools {
+                   jdk "java-11-openjdk.x86_64"
+             }
             steps {
                 
 		    sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=demoapp-pra'
