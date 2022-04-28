@@ -13,7 +13,7 @@ pipeline {
         }
 	stage('SonarCloud analysis') {
 	    tools {
-                   jdk "java-11-openjdk.x86_64"
+                   jdk 'JDK11'
              }
             steps {
                 
