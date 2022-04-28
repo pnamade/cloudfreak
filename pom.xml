@@ -277,19 +277,11 @@
       </snapshots>
     </pluginRepository>
   </pluginRepositories>
-  
-  			<plugin>
-			       <groupId>org.sonarsource.scanner.maven</groupId>
-			       <artifactId>sonar-maven-plugin</artifactId>
-			       <version>3.0</version>
-			       <executions>
-				 <execution>
-				  <phase>verify</phase>
-				  <goals>
-				    <goal>sonar</goal>
-				  </goals>
-				 </execution>
-			       </executions>
-			</plugin>
-
+	
+  <plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>sonar-maven-plugin</artifactId>
+    <version>3.0.2</version>
+  </plugin>
+	
 </project>
