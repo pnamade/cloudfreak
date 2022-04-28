@@ -11,6 +11,12 @@ pipeline {
                     sh 'mvn  clean install package'
             }
         }
+	stage('SonarCloud analysis') {
+            steps {
+                
+		    sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=demoapp-pra'
+            }
+         }
         
         stage('Copy Artifact') {
            steps { 
